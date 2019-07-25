@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+<center> <h1 style="color: khaki"> Приветсвую дорогой друг, ты попал в место где можно поднять кэш </h1></center>
+<center>
+   <h1 style="color: blueviolet"> НУ ЧТО НАЧНЕМ?</h1></center>
+<h1 style="color: cadetblue; font-size: 30px" > Введите число, которое вы бы хотели увидеть на табло </h1><input id="otvet" type="text"></input>
+<center><img src="strelka.jpg" width="100"></center>
+<center> <h1 id="score"></h1> </center>
+<center>
+    <img onmousedown="whenclick()" onmouseup="whenrelease()"  id="rltr" src="ruletka.png"  width="250">
+</center>
+<script>
+
+    spin=false
+    dig=0
+    setInterval(function () {
+        if (spin===true){
+            dig=dig+10
+            if(dig>360)dig=0
+            document.getElementById('rltr').style.transform='rotate('+dig+'deg)'
+
+        }
+
+    },5)
+    function whenclick() {
+    spin=true
+        
+    }    
+function whenrelease() {
+    spin=false
+    console.log(dig)
+    if(0<=dig&&dig<10||dig===360){
+       document.getElementById('score').innerHTML=0
+    }
+    if (10<=dig&&dig<20) {
+        document.getElementById('score').innerHTML=26
+    }
+
+            if (20<=dig&&dig<30){
+        document.getElementById('score').innerHTML=3
+            }
+
+                if (30<=dig&&dig<40){
+                document.getElementById('score').innerHTML=35
+                }
+                if (40<=dig&&dig<50){
+                    document.getElementById('score').innerHTML=12
+                }
+if (50<=dig&&dig<60){
+                    document.getElementById('score').innerHTML=28
+}
+if (60<=dig&&dig<70) {
+    document.getElementById('score').innerHTML = 7
+}
+if (70<=dig&&dig<80) {
+    document.getElementById('score').innerHTML = 29
+}
+if (80<=dig&&dig<90) {
+    document.getElementById('score').innerHTML = 18
+}
+if (90<=dig&&dig<100) {
+    document.getElementById('score').innerHTML = 22
+}
+if (100<=dig&&dig<110){
+                    document.getElementById('score').innerHTML=9}
+if (110<=dig&&dig<120) {
+    document.getElementById('score').innerHTML = 31
+}
+if (120<=dig&&dig<130) {
+    document.getElementById('score').innerHTML = 14
+}
+if (130<=dig&&dig<140) {
+    document.getElementById('score').innerHTML = 20
+}
+if (140<=dig&&dig<150) {
+    document.getElementById('score').innerHTML = 1}
+if (150<=dig&&dig<160) {
+    document.getElementById('score').innerHTML = 33}
+    if (160 <= dig && dig < 170) {
+        document.getElementById('score').innerHTML = 24
+    }
+    if (170 <= dig && dig < 180) {
+        document.getElementById('score').innerHTML = 5
+    }
+if (180<=dig&&dig<190) {
+    document.getElementById('score').innerHTML = 10}
+    if (190<=dig&&dig<200) {
+    document.getElementById('score').innerHTML = 23}
+        if (200<=dig&&dig<210) {
+    document.getElementById('score').innerHTML =8}
+            if (210<=dig&&dig<220) {
+    document.getElementById('score').innerHTML = 30}
+                if (220<=dig&&dig<230) {
+    document.getElementById('score').innerHTML = 11}
+     if (230<=dig&&dig<240) {
+    document.getElementById('score').innerHTML = 36}
+     if (240<=dig&&dig<250) {
+    document.getElementById('score').innerHTML = 13}
+     if (250<=dig&&dig<260) {
+    document.getElementById('score').innerHTML = 27}
+     if (270<=dig&&dig<280) {
+    document.getElementById('score').innerHTML = 6}
+     if (210<=dig&&dig<220) {
+    document.getElementById('score').innerHTML = 34}
+     if (220<=dig&&dig<230) {
+    document.getElementById('score').innerHTML = 17}
+     if (230<=dig&&dig<240) {
+    document.getElementById('score').innerHTML = 25}
+     if (240<=dig&&dig<250) {
+    document.getElementById('score').innerHTML = 2}
+     if (250<=dig&&dig<260) {
+    document.getElementById('score').innerHTML = 21}
+     if (260<=dig&&dig<270) {
+    document.getElementById('score').innerHTML = 4}
+     if (270<=dig&&dig<280) {
+    document.getElementById('score').innerHTML = 19}
+     if (280<=dig&&dig<290) {
+    document.getElementById('score').innerHTML = 15}
+     if (290<=dig&&dig<300) {
+    document.getElementById('score').innerHTML = 32}
+    if(document.getElementById('otvet').value===document.getElementById('score').innerHTML){
+    alert('Вы выиграли 100 баксов!!!!!')
+    }else{ alert('Попробуйте еще разок')}
+    }
+</script>
+</body>
+</html>
